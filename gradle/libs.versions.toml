@@ -6,6 +6,9 @@ quilt_loader = "0.19.1"
 
 quilted_fabric_api = "7.0.3+0.83.1-1.20.1"
 
+modmenu = "7.1.0"
+owo = "0.11.1+1.20"
+
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 quilt_mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "quilt_mappings" }
@@ -13,6 +16,9 @@ quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "quilt_loade
 
 quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api", version.ref = "quilted_fabric_api" }
 quilted_fabric_api_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api-deprecated", version.ref = "quilted_fabric_api" }
+modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
+owo_lib = { module = "io.wispforest:owo-lib", version.ref = "owo" }
+owo_sentinel = { module = "io.wispforest:owo-sentinel", version.ref = "owo" }
 
 # If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
 [bundles]

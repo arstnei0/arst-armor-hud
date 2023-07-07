@@ -1,6 +1,7 @@
 plugins {
 	id 'maven-publish'
 	alias libs.plugins.quilt.loom
+	id "com.modrinth.minotaur" version "2.+"
 }
 
 base.archivesName = project.archives_base_name
@@ -13,6 +14,11 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		url 'https://maven.terraformersmc.com/releases'
+	}
+
+	maven { url 'https://maven.wispforest.io' }
 }
 
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
@@ -33,6 +39,11 @@ dependencies {
 	// Quilted Fabric API will automatically pull in the correct QSL version.
 	modImplementation libs.quilted.fabric.api
 	// modImplementation libs.bundles.quilted.fabric.api // If you wish to use Fabric API's deprecated modules, you can replace the above line with this one
+
+	modImplementation libs.modmenu
+	modImplementation(libs.owo.lib)
+	annotationProcessor(libs.owo.lib)
+	include libs.owo.sentinel
 }
 
 processResources {
@@ -85,4 +96,19 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+
+import com.modrinth.minotaur.dependencies.ModDependency
+
+modrinth {
+	token = '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'
+	projectId = 'JtW6ALXz'
+	versionNumber = version
+	uploadFile = remapJar
+	gameVersions = ['1.20.1']
+	loaders = ['quilt']
+	dependencies = [
+		new ModDependency('ccKDOlHs', 'required'),
+		new ModDependency('mOgUt4GM', 'optional')
+	]
 }

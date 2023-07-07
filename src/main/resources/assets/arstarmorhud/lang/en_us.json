@@ -1,0 +1,5 @@
+{
+  "text.config.arstarmorhudconfig.title": "Arst Armor Hud Config",
+  "text.config.arstarmorhudconfig.option.hideEmptySlots": "Hide Empty Armor Slots",
+  "text.config.arstarmorhudconfig.option.showSlots": "Show Gui Slots"
+}

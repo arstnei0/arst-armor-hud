@@ -1,15 +1,17 @@
-package com.example.example_mod;
+package com.arstarmorhud;
 
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExampleMod implements ModInitializer {
+public class ArstArmorHud implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod name as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger("Example Mod");
+	public static final Logger LOGGER = LoggerFactory.getLogger("Arst Armor Hud");
+
+	public static final com.arstarmorhud.Config CONFIG = com.arstarmorhud.Config.createAndLoad();
 
 	@Override
 	public void onInitialize(ModContainer mod) {
