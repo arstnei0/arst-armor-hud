@@ -1,5 +1,7 @@
 # Arst Armor Hud
 
+This mod is published on [Modrinth](https://modrinth.com/mod/arst-armor-hud).
+
 Show your armor in your hotbar!
 
 You can customize this mod with the [Mod Menu](https://modrinth.com/mod/modmenu) mod. Available options now are:
